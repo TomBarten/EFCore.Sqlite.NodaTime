@@ -20,6 +20,6 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal
             => new SqliteTypeMapping<T>(parameters);
 
         private static RelationalTypeMappingParameters CreateParameters(IPattern<T> pattern)
-            => new(new CoreTypeMappingParameters(typeof(T), pattern.AsValueConverter()), "TEXT");
+            => new(new CoreTypeMappingParameters(typeof(T), pattern.AsValueConverter(), pattern.AsValueComparer()), "TEXT");
     }
 }

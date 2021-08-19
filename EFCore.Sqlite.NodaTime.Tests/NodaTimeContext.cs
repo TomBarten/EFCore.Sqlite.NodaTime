@@ -35,6 +35,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // TODO add new types here for testing migration
             modelBuilder.Entity<NodaTimeTypes>()
                 .HasData(new NodaTimeTypes
                 {
@@ -42,6 +43,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite
                     LocalDate = LocalDateQueryTests.Value,
                     LocalTime = LocalTimeQueryTests.Value,
                     Instant = InstantQueryTests.Value,
+                    Duration = DurationQueryTest.Value,
                     Id = 1,
                 });
 

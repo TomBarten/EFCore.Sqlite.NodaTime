@@ -14,5 +14,12 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal
         internal static readonly IPattern<LocalTime> LocalTime = LocalTimePattern.ExtendedIso;
 
         internal static readonly IPattern<LocalDate> LocalDate = LocalDatePattern.Iso;
+
+        internal static readonly IPattern<ZonedDateTime> ZonedDateTime =
+            ZonedDateTimePattern.ExtendedFormatOnlyIso.WithZoneProvider(DateTimeZoneProviders.Tzdb);
+
+        internal static readonly IPattern<Duration> Duration = DurationPattern.Roundtrip;
+
+        internal static readonly IPattern<Offset> Offset = OffsetPattern.GeneralInvariantWithZ;
     }
 }
