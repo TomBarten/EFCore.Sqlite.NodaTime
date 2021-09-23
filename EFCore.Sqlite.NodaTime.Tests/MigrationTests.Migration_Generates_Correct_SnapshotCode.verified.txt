@@ -19,6 +19,10 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Instant")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -43,6 +47,7 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Migrations
                         new
                         {
                             Id = 1,
+                            Duration = "0:00:00:00.000000001",
                             Instant = "2020-10-10 23:42:16.321",
                             LocalDate = "2020-10-10",
                             LocalDateTime = "2020-10-10 23:42:16.321",

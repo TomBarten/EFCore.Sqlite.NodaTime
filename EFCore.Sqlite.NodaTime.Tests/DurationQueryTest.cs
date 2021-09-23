@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using NodaTime;
 using Xunit;
@@ -22,13 +18,13 @@ namespace Microsoft.EntityFrameworkCore.Sqlite
         public void Roundtrip() => Assert.Equal(Value, Query.Single());
 
         [Fact]
-        public Task Equal() => VerifyQuery(x => x == Duration.Epsilon);
+        public Task Equal() => VerifyQuery(x => x == Value);
 
         [Fact]
-        public Task GreaterThan() => VerifyQuery(x => x > Duration.Zero);
+        public Task GreaterThan() => VerifyQuery(x => x > Value.Minus(Duration.Epsilon));
 
         [Fact]
-        public Task LessThan() => VerifyQuery(x => x < Duration.Epsilon.Plus(Duration.Epsilon));
+        public Task LessThan() => VerifyQuery(x => x < Value.Plus(Duration.Epsilon));
 
         [Fact]
         public Task Update() => VerifyUpdate(x => x.Duration = x.Duration.Plus(Duration.Epsilon));

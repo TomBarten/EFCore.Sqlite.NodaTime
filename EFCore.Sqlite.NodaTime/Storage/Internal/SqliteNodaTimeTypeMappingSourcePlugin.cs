@@ -13,9 +13,9 @@ namespace Microsoft.EntityFrameworkCore.Sqlite.Storage.Internal
             { typeof(LocalDate), new SqliteTypeMapping<LocalDate>(SqlitePatterns.LocalDate) },
             { typeof(LocalTime), new SqliteTypeMapping<LocalTime>(SqlitePatterns.LocalTime) },
             { typeof(Instant), new SqliteTypeMapping<Instant>(SqlitePatterns.Instant) },
-            //{ typeof(ZonedDateTime), new SqliteTypeMapping<ZonedDateTime>(SqlitePatterns.ZonedDateTime) },
+            { typeof(ZonedDateTime), new SqliteTypeMapping<ZonedDateTime>(SqlitePatterns.ZonedDateTime) },
             { typeof(Duration), new SqliteTypeMapping<Duration>(SqlitePatterns.Duration) },
-            //{ typeof(Offset), new SqliteTypeMapping<Offset>(SqlitePatterns.Offset) },
+            { typeof(Offset), new SqliteTypeMapping<Offset>(SqlitePatterns.Offset) },
         };
 
         public RelationalTypeMapping? FindMapping(in RelationalTypeMappingInfo mappingInfo)

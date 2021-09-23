@@ -44,6 +44,8 @@ namespace Microsoft.EntityFrameworkCore.Sqlite
                     LocalTime = LocalTimeQueryTests.Value,
                     Instant = InstantQueryTests.Value,
                     Duration = DurationQueryTest.Value,
+                    Offset = null,
+                    ZonedDateTime = null,
                     Id = 1,
                 });
 

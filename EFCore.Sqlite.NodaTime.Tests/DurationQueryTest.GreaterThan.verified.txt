@@ -1,0 +1,13 @@
+﻿[
+  {
+    Type: ReaderExecuted,
+    Parameters: {
+      @__Minus_0 (String): 0:00:00:00
+    },
+    Text: 
+SELECT "n"."Duration"
+FROM "NodaTimeTypes" AS "n"
+WHERE "n"."Duration" > @__Minus_0
+LIMIT 2
+  }
+]

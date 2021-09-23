@@ -1,4 +1,4 @@
-[
+﻿[
   {
     Type: ReaderExecuted,
     Text: 
@@ -11,10 +11,10 @@ LIMIT 2
     HasTransaction: true,
     Parameters: {
       @p1 (String): 1,
-      @p0 (String): 23:42:26.321
+      @p0 (String): 0:00:00:00.000000002
     },
     Text: 
-UPDATE "NodaTimeTypes" SET "LocalTime" = @p0
+UPDATE "NodaTimeTypes" SET "Duration" = @p0
 WHERE "Id" = @p1;
 SELECT changes();
   }

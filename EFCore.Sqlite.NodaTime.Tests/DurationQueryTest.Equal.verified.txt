@@ -1,0 +1,10 @@
+﻿[
+  {
+    Type: ReaderExecuted,
+    Text: 
+SELECT "n"."Duration"
+FROM "NodaTimeTypes" AS "n"
+WHERE "n"."Duration" = '0:00:00:00.000000001'
+LIMIT 2
+  }
+]
